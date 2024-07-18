@@ -19,7 +19,6 @@ steps:
     projectJsonPath: 'project.json'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Information'
-    disableBuiltInNugetFeeds: 
 
 - task: UiPathDeploy@4
   inputs:
