@@ -19,4 +19,11 @@ steps:
     projectJsonPath: 'project.json'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Information'
-    
+    disableBuiltInNugetFeeds: 
+
+- task: UiPathDeploy@4
+  inputs:
+    orchestratorConnection: 'Orch_Connection'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+    folderName: 'UiPath_TestFolder'
+    traceLevel: 'Information'
